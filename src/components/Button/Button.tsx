@@ -1,5 +1,4 @@
 import React from 'react';
-import '../tailwind.css';
 
 interface Props {
   text: string;
