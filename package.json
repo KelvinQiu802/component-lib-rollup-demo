@@ -1,6 +1,6 @@
 {
   "name": "component-lib-rollup-demo",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "React Component Library",
   "scripts": {
     "build": "rm -rf dist && rollup -c",
