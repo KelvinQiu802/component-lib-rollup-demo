@@ -24,7 +24,7 @@ export default [
       resolve(),
       commonjs(),
       typescript({ tsconfig: './tsconfig.json' }),
-      postcss(),
+      postcss({ config: { path: './postcss.config.cjs' } }),
     ],
     external: ['react'],
   },
