@@ -3,9 +3,9 @@ import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import dts from 'rollup-plugin-dts';
 import postcss from 'rollup-plugin-postcss';
-import postcssImport from 'postcss-import';
 import tailwindcss from 'tailwindcss';
 import cssnano from 'cssnano';
+import autoprefixer from 'autoprefixer';
 import terser from '@rollup/plugin-terser';
 import packageJson from './package.json' assert { type: 'json' };
 
@@ -31,7 +31,11 @@ export default [
       postcss({
         extensions: ['.css'],
         extract: true,
-        plugins: [postcssImport(), tailwindcss(), cssnano()],
+        plugins: [
+          tailwindcss(),
+          autoprefixer(),
+          //  , cssnano()
+        ],
       }),
       terser(),
     ],
